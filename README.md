@@ -1,82 +1,82 @@
-🃏 Batalha de Cartas no Super Trunfo — Projeto em Linguagem C
-📌 Descrição
-Este projeto simula uma batalha entre duas cartas de cidades no estilo do jogo Super Trunfo, utilizando a linguagem C. Cada carta possui atributos como estado, código, nome da cidade, população, área, PIB, pontos turísticos, além de dois atributos calculados: densidade populacional e PIB per capita.
+# 🃏 Super Trunfo de Cidades
 
-Neste nível mestre, introduzimos o cálculo de um Super Poder para cada carta, que envolve uma combinação estratégica de atributos. O programa compara todos os atributos numéricos entre as duas cartas e determina o vencedor de cada comparação.
+> Batalha de cartas no estilo Super Trunfo, implementada em C.  
+> Cadastro, cálculo de densidade e PIB per capita, super poder e comparação de duas cartas.
 
-🚀 Funcionalidades
-Cadastro de duas cartas com dados completos.
+---
 
-Cálculo da densidade populacional e do PIB per capita.
+## 📑 Sumário
 
-Cálculo do Super Poder com base nos seguintes atributos:
+- [Sobre](#sobre)  
+- [Funcionalidades](#funcionalidades)  
+- [Tecnologias](#tecnologias)  
+- [Estrutura de Diretórios](#estrutura-de-diretórios)  
+- [Como Compilar e Rodar](#como-compilar-e-roar)  
+- [Exemplo de Uso](#exemplo-de-uso)  
+- [Autor](#autor)  
+- [Licença](#licença)  
 
-População
+---
 
-Área
+## 📖 Sobre
 
-PIB
+Este projeto simula uma **batalha de cartas** entre duas cidades, com atributos como:
 
-Pontos turísticos
+- População (unsigned long int)  
+- Área (float)  
+- PIB em bilhões (float)  
+- Pontos turísticos (int)  
+- Densidade populacional (float, calculada)  
+- PIB per capita (float, calculado)  
+- Super Poder (float, calculado)  
 
-PIB per capita
+Ao final, o programa compara cada atributo e indica qual carta venceu.
 
-Inverso da densidade populacional (quanto menor a densidade, maior o poder).
+---
 
-Comparação entre as cartas em cada atributo.
+## 🚀 Funcionalidades
 
-Exibição dos resultados da batalha carta a carta.
+1. Leitura de dados de **duas cartas** via teclado.  
+2. Cálculo de:
+   - **Densidade populacional** (hab/km²)  
+   - **PIB per capita** (reais)  
+   - **Super Poder**, fórmula:  
+     ```
+     superPoder = população 
+                + área 
+                + (PIB × 1e9) 
+                + pontosTurísticos 
+                + pibPerCapita 
+                + (1 / densidadePopulacional)
+     ```
+3. Exibição formatada de todos os valores.  
+4. Comparação de atributos e indicação do vencedor (1 = Carta 1, 0 = Carta 2).
 
-🧠 Lógica do Super Poder
-A fórmula usada para o cálculo do Super Poder de cada carta é:
+---
 
-markdown
-Copiar
-Editar
-SuperPoder = população 
-           + área 
-           + PIB (em bilhões) 
-           + pontos turísticos 
-           + PIB per capita 
-           + (1 / densidade populacional)
-Este cálculo utiliza conversão de tipos para manter a precisão nos resultados.
+## 🛠️ Tecnologias
 
-🛠️ Tecnologias Utilizadas
-Linguagem C
+- Linguagem **C**  
+- Compilador **GCC**  
+- Pode usar IDEs como **VSCode**, **Code::Blocks** ou terminal puro.
 
-Compilador GCC
+---
 
-IDEs como VSCode ou Code::Blocks (opcional)
+## 📂 Estrutura de Diretórios
 
-🗃️ Estrutura do Projeto
-cpp
-Copiar
-Editar
-📁 super_trunfo/
-├── super_trunfo.c   // Código-fonte principal
-├── README.md        // (Opcional) Documentação
-📸 Exemplo de Saída
-bash
-Copiar
-Editar
-Comparação de Cartas:
-
-População: Carta 1 venceu (1)
-Área: Carta 2 venceu (0)
-PIB: Carta 2 venceu (0)
-Pontos Turísticos: Carta 1 venceu (1)
-Densidade Populacional: Carta 1 venceu (1)
-PIB per Capita: Carta 2 venceu (0)
-Super Poder: Carta 1 venceu (1)
-🧪 Como Executar
+```bash
+super-trunfo-cidades/
+├── super_trunfo.c    # Código-fonte principal
+└── README.md         # Documentação (este arquivo)
+## 🖥️ Como Compilar e Rodar
 Clone o repositório:
 
 bash
 Copiar
 Editar
-git clone https://github.com/seu-usuario/super-trunfo.git
-cd super-trunfo
-Compile o código:
+git clone https://github.com/SEU_USUARIO/super-trunfo-cidades.git
+cd super-trunfo-cidades
+Compile:
 
 bash
 Copiar
@@ -88,15 +88,3 @@ bash
 Copiar
 Editar
 ./super_trunfo
-📋 Requisitos
-Sistema com terminal bash (Linux/macOS) ou CMD/PowerShell (Windows)
-
-Compilador C (como GCC ou MinGW)
-
-👨‍💻 Autor
-Gabriel Pimenta
-Desenvolvedor Front-End | Estudante de ADS
-🔗 GitHub
-
-🏁 Status
-✅ Projeto finalizado e pronto para entrega — Nível Mestre do Desafio Super Trunfo.
